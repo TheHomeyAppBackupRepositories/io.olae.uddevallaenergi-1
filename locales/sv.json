@@ -1,0 +1,18 @@
+{
+  "tokens": {
+    "next_matavfall": "Nästa matavfall",
+    "next_restavfall": "Nästa restavfall"
+  },
+  "notifications": {
+    "next_date_in_past": "Datum för nästa hämtdag har passerats",
+    "no_street_address": "Ingen giltig gatuadress finns angiven. Vänligen kontrollera appens inställningar!",
+    "no_plant": "Kunde inte anläggningsnr för gatuadress __address__. Appen kommer ej att fungera korrekt!",
+    "fetch_plant_error": "Ett fel uppstod när anläggningsnr skulle hämtas: __error__"
+  },
+  "settings": {
+    "title": "Uddevalla Energi",
+    "subtitle": "Ställ in din gatuadress här för att få rätt datum för upphämtning. OBS endast gata och nummer",
+    "address": "Gatuadress",
+    "save": "Spara inställningar"
+  }
+}

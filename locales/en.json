@@ -1,0 +1,18 @@
+{
+  "tokens": {
+    "next_matavfall": "Next foodwaste",
+    "next_restavfall": "Next other waste"
+  },
+  "notifications": {
+    "next_date_in_past": "Date for next pickup is in the past",
+    "no_street_address": "No valid street address configured. Please review app settings!",
+    "no_plant": "Unable to find a plant number for address __address__. This app will not function correctly.",
+    "fetch_plant_error": "An error occured when resolving plant number: __error__"
+  },
+  "settings": {
+    "title": "Uddevalla Energi",
+    "subtitle": "Configure your street address to resolve the correct pickup dates.",
+    "address": "Street address",
+    "save": "Save settings"
+  }
+}

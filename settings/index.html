@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- The '/homey.js' script must be included in your settings view to work -->
+    <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+    <script type="text/javascript" src="/https.js" data-origin="settings"></script>
+  </head>
+  <body>
+    <h1 data-i18n="settings.title">
+      <!--
+        This field will automatically be filled by a translated string with key 'settings.title'.
+        Read more about translations at Internationalization.
+      -->
+    </h1>
+    <p data-i18n="settings.subtitle">
+      <!-- This field will also be translated -->
+    </p>
+
+    <fieldset>
+      <legend data-i18n="settings.address"></legend>
+      <div class="field row">
+        <label for="streetaddress" data-i18n="settings.address"></label>
+        <input id="streetaddress" type="text" value="" />
+      </div>
+    </fieldset>
+
+    <button id="save" class="right" data-i18n="settings.save"></button>
+
+    <script type="text/javascript">
+      // a method named 'onHomeyReady' must be present in your code
+      function onHomeyReady(Homey) {
+        // Tell Homey we're ready to be displayed
+        Homey.ready();
+
+        var streetaddressElement = document.getElementById('streetaddress');
+        var saveElement = document.getElementById('save');
+
+        Homey.get('streetaddress', function (err, streetaddress) {
+          if (err) return Homey.alert(err);
+          streetaddressElement.value = streetaddress;
+        });
+
+        saveElement.addEventListener('click', function (e) {
+          Homey.set('streetaddress', streetaddressElement.value, function (err) {
+            if (err) return Homey.alert(err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
